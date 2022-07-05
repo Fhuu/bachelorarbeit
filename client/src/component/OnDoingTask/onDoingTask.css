@@ -1,0 +1,32 @@
+#on-going-task-container {
+	padding: 1rem;
+}
+
+#on-going-task-detail {
+	margin: 1rem 0;
+	min-height: 6rem;
+	background-color: #fff1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+#hint-message-container {
+	margin: 1rem 0 0 0;
+	min-height: 6rem;
+	border: 3px dashed #ffffff44;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#hint-message {
+	text-align: center;
+}
+
+#task-label {
+	text-align: justify;
+}

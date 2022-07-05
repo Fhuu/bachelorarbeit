@@ -1,0 +1,33 @@
+#confirm-button {
+	background: #fff;
+	
+	border-radius: 0.15rem;
+
+	max-width: 6.5rem;
+	min-width: 3.5rem;
+
+	max-height: 3rem;
+	min-height: 2.5rem;
+	
+	color: #379e7f;
+	
+	font-weight: bolder;
+
+	padding: 0 0.5rem;
+}
+
+#negative-button {
+	border-radius: 2rem;
+
+	max-width: 6.5rem;
+	min-width: 3.5rem;
+
+	max-height: 3rem;
+	min-height: 2.5rem;
+	
+	color: #ad2121;
+
+	font-weight: 700;
+
+	padding: 0 0.5rem;
+}

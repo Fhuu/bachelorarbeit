@@ -1,0 +1,21 @@
+.note-element-container {
+	background-color: white;
+	padding: 0.5rem 0 1rem 0;
+	height: 100%;
+}
+
+.note-element-container > header {
+	font-size: 18px;
+	margin: 0.2rem 0;
+	max-height: 1.7rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.note-element-container > div {
+	max-height: 12.5rem;
+	text-align: justify;
+	overflow: hidden;
+	font-size: 12px;
+	padding: 0 1rem;
+}

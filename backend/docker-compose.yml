@@ -1,0 +1,70 @@
+version: "3"
+
+services: 
+  server:
+    working_dir: /var/www/html
+    container_name: ba-server
+    image: ba/backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www/html/src
+      - ./dist:/var/www/html/dist
+      - ../client/build:/var/www/html/build
+      - ./repositories:/var/www/html/repositories
+    ports:
+      - 3001:3000
+    depends_on:
+      - database
+    command: ["yarn", "start:dev"]
+    networks:
+      - internal
+      - external
+
+  database:
+    container_name: ba-database
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ../database:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=ba
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    networks:
+      - internal
+
+  # git-server:
+  #   container_name: ba-git-server
+  #   image: gitlab/gitlab-ee
+  #   ports:
+  #     - 8080:80
+  #     - 8083:443
+  #     - '8082:22'
+  #   volumes:
+  #     - ./gitlab/config:/etc/gitlab
+  #     - ./gitlab/logs:/var/log/gitlab
+  #     - ./gitlab/data:/var/opt/gitlab
+  #   networks:
+  #     - internal
+
+  # client: 
+  #   container_name: ba-client
+  #   working_dir: /var/www/html
+  #   build:
+  #     context: ../client
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - server
+  #   volumes:
+  #     - ../client/src:/var/www/html/src
+  #   ports:
+  #     - 80:3000
+
+networks:
+  internal:
+    external: false
+  external:
+    external: true

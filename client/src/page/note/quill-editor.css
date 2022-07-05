@@ -1,0 +1,12 @@
+.quill {
+	background-color: #fff;
+  }
+  
+  .ql-editor {
+	min-height: 50vh;
+	max-height: 90vh;
+  }
+  
+  .ql-editor p {
+	text-align: justify;
+  }

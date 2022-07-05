@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	margin: 0 auto;
+
+	min-height: 10rem;
+
+	padding: 1rem 0;
+}
+
+#work-time {
+	color: #ff4444;
+	font-weight: 700;
+}
+
+#pause-time {
+	color: #24755dff;
+	font-weight: 700;
+}

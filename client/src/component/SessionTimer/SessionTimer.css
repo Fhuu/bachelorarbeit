@@ -1,0 +1,50 @@
+.session-container {
+	margin: 2rem auto;
+}
+
+.badge-container {
+	display: flex;
+	flex-direction: row;
+
+	overflow-x: scroll;
+}
+
+.badge-container::-webkit-scrollbar {
+	display: none;
+}
+
+.badges {
+	min-height: 2rem;
+	min-width: 2rem;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: auto 0.5rem;
+
+	border-radius: 45%;
+}
+
+.timer-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	margin: 0.5rem auto 2rem auto;
+
+	background-color: #444;
+	min-height: 10rem;
+
+	padding: 1rem;
+}
+
+#work-time {
+	color: #379e7f;
+	font-weight: 700;
+}
+
+#pause-time {
+	color: #ff4444;
+	font-weight: 700;
+}

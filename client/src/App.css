@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+
+  min-height: 100vh;
+  background-color: #222;
+  color: #999;
+  padding: 0 1rem;
+}
+
+input {
+  background-color: #555;
+}

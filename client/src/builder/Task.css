@@ -1,0 +1,28 @@
+#task-container {
+	background-color: #555;
+	margin: 0.25rem auto;
+	padding: 0 1rem;
+
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#task-label {
+	text-align: justify;
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.task-buttons {
+	width: 0;
+	overflow: hidden;
+
+	transition: 0.5s ease-out all;
+}
+
+.task-buttons.active {
+	width: 16rem;
+}
